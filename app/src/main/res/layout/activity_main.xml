@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/page_dimens"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_car"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:layout_width="100dp"
+        android:layout_height="70dp"/>
+
+    <TextView
+        android:id="@+id/tv_hello"
+        app:layout_constraintTop_toBottomOf="@+id/image_car"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="48dp"
+        android:text="Hello there,\nWelcome back"
+        android:textColor="@color/black"
+        android:fontFamily="@font/regular"
+        android:textSize="32sp"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hello"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Sign in to continue"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_in"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:background="@drawable/edit_text_border"
+            android:paddingStart="@dimen/page_et"
+            android:paddingVertical="@dimen/page_et"
+            android:drawablePadding="@dimen/page_et"
+            android:drawableStart="@drawable/ic_email"
+            android:id="@+id/et_user_name"
+            android:hint="user name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="password"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_border"
+                android:paddingStart="@dimen/page_et"
+                android:drawablePadding="@dimen/page_et"
+                android:paddingVertical="@dimen/page_et"
+                android:drawableStart="@drawable/ic_lock"
+                android:id="@+id/et_password"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forgot"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        android:text="Forgot password?"
+        android:layout_marginTop="@dimen/page_dimens"
+        android:paddingEnd="@dimen/page_dimens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_go"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot"
+        android:text="Go"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="@dimen/page_dimens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go"
+        android:layout_marginTop="@dimen/page_dimens"
+        android:textAllCaps="true"
+        android:text="New user? Sign up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
